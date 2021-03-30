@@ -1,0 +1,26 @@
+package  com.shareniu.ch13
+import  com.barry.drools.bean.Person;
+
+rule "Listener-Rule1"
+when
+then
+    System.out.println("Listener-Rule1被触发,");
+ end
+rule "Listener-Rule2"
+when
+then
+    System.out.println("Listener-Rule2被触发,");
+ end
+
+rule "channel-Rule1"
+when
+$p:Person()
+then
+    System.out.println("channel被触发,");
+    channels["shareniu-channel"].send($p);
+    channels["shareniu-channel"].send($p);
+ end
+
+
+
+

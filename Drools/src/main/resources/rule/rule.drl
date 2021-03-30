@@ -1,0 +1,16 @@
+package  com.barry.ch11
+import  com.barry.drools.bean.Person
+rule "test-Rule1"
+salience 10
+when
+$p:Person()
+then
+    System.out.println("test-Rule1被触发,22222"+$p);
+ end
+
+
+
+
+
+
+

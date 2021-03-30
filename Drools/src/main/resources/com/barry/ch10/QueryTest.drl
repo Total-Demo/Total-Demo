@@ -1,0 +1,28 @@
+package  com.barry.drools.ch10
+import com.barry.drools.bean.Person;
+import  com.barry.drools.bean.Car;
+import  com.barry.drools.mapAndList.SubPerson;
+import  java.lang.Integer;
+rule "queryRule1"
+salience 10
+when
+    $p1:Person()
+then
+    System.out.println("queryRule1被触发,"+$p1);
+ end
+query "quert-by-age"
+    $p1:Person(age==23)
+end
+
+query "quert-by-param"(Integer ageParam)
+    $p2:Person(age>ageParam)
+end
+
+
+
+
+
+
+
+
+

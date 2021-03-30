@@ -1,0 +1,21 @@
+package  com.barry.drools.ch10
+import com.barry.drools.bean.Person;
+import  com.barry.drools.bean.Car;
+import  com.barry.drools.mapAndList.SubPerson;
+
+rule "muliRule1"
+salience 10
+when
+    $p1:Person(age>10)
+    $p2:Person(age>15)
+then
+    System.out.println("muliRule1被触发,"+$p1);
+    System.out.println("muliRule1被触发,"+$p2);
+ end
+
+
+
+
+
+
+

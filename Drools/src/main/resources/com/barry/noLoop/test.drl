@@ -1,0 +1,31 @@
+package  com.barry.drools.noLoop
+import   com.barry.drools.bean.Person
+//rule "noLoop1"
+//no-loop false
+//when
+//    $p:Person(age<20)
+//then
+//   $p.setAge($p.getAge()+1);
+//   System.out.println("当前的年龄："+$p.getAge());
+//   update($p)
+// end
+
+
+rule "noLoop2"
+no-loop false
+when
+    $p:Person(age<20)
+then
+   $p.setAge(23);
+   System.out.println("noLoop2被触发,年龄"+$p.getAge());
+   update($p)
+ end
+
+
+rule "noLoop3"
+lock-on-active true
+when
+     $p:Person(age>20)
+then
+   System.out.println("noLoop3被触发,年龄"+$p.getAge());
+ end

@@ -1,0 +1,23 @@
+package  com.barry.drools.ch11
+import com.barry.drools.bean.Person;
+import  com.barry.drools.mapAndList.Car;
+import  com.barry.drools.mapAndList.SubPerson;
+global  java.util.List list1
+global com.barry.drools.bean.Person p;
+//rule "global-Rule1"
+//salience 10
+//when
+//
+//then
+//    System.out.println("global-Rule1被触发,"+list1);
+//    list1.add(1);
+//    list1.add(2);
+//    p.setAge(1000);
+// end
+
+
+
+
+
+
+

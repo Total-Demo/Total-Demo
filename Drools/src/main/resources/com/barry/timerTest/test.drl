@@ -1,0 +1,14 @@
+package  com.barry.drools.timerTest
+
+rule "timerTest"
+timer (cron:* 0/1 * * * ?)
+when
+then
+    System.out.println("timerTest被触发");
+ end
+
+rule "timerTest1"
+when
+then
+    System.out.println("timerTest1被触发");
+ end

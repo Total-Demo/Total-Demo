@@ -1,0 +1,59 @@
+package  com.barry.drools.agendaGroup
+
+rule "agenda-group1"
+agenda-group "agenda-group-test"
+
+when
+then
+    System.out.println("agenda-group1被触发");
+ end
+
+rule "agenda-group2"
+agenda-group "agenda-group-test"
+when
+then
+    System.out.println("agenda-group2被触发");
+ end
+rule "agenda-group3"
+//auto-focus true
+agenda-group "agenda-group-test1"
+when
+then
+    System.out.println("agenda-group3被触发");
+ end
+
+ rule "agenda-group4"
+ agenda-group "agenda-group-test1"
+ when
+ then
+     System.out.println("agenda-group4被触发");
+  end
+
+
+   rule "ruleflow-group1"
+   ruleflow-group "ruleflow-group1"
+   when
+   then
+       System.out.println("ruleflow-group1被触发");
+    end
+
+   rule "ruleflow-group2"
+   ruleflow-group "ruleflow-group1"
+   when
+   then
+       System.out.println("ruleflow-group2被触发");
+    end
+
+
+       rule "ruleflow-group3"
+       ruleflow-group "ruleflow-group2"
+       when
+       then
+           System.out.println("ruleflow-group3被触发");
+        end
+       rule "ruleflow-group4"
+       ruleflow-group "ruleflow-group2"
+       when
+       then
+           System.out.println("ruleflow-group4被触发");
+        end

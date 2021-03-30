@@ -1,0 +1,12 @@
+package  com.barry.drools.mapAndList
+import com.barry.drools.bean.Person;
+import  com.barry.drools.bean.Car;
+import  com.barry.drools.mapAndList.SubPerson;
+
+//rule "subclass2"
+//when
+//  $p1:Car( subPerson#com.shareniu.ch3.Person.age==18)
+//then
+//    System.out.println("subclass1被触发"+$p1);
+// end
+

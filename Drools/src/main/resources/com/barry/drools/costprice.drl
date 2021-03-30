@@ -1,0 +1,53 @@
+package com.barry.drools
+import com.barry.drools.bean.Car
+import com.barry.drools.bean.Person
+
+rule "大于等于60"
+when
+    $car:Car(person.age>=60)
+then
+    System.out.println("大于等于60");
+    $car.setFinalPrice($car.getPrice()*0.5);
+    System.out.println($car.getFinalPrice());
+end
+
+rule "大于等于50,小于60"
+when
+     $car:Car(person.age>=50 && person.age<60)
+then
+     System.out.println("大于等于50,小于60");
+     $car.setFinalPrice($car.getPrice()*0.6);
+     System.out.println($car.getFinalPrice());
+end
+
+rule "大于等于30,小于50barry"
+when
+    $car:Car(person.age>=30 && person.age<50)
+then
+    System.out.println("大于等于30,小于50");
+    $car.setFinalPrice($car.getPrice()*0.7);
+    System.out.println($car.getFinalPrice());
+end
+
+rule "小于30barry"
+when
+    $car:Car(person.age<30)
+then
+    System.out.println("小于30");
+    $car.setFinalPrice($car.getPrice()*0.9);
+    System.out.println($car.getFinalPrice());
+end
+
+rule "11111"
+when
+
+then
+    System.out.println("11111");
+end
+
+rule "22222"
+when
+
+then
+    System.out.println("22222");
+end

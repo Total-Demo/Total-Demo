@@ -1,0 +1,48 @@
+package  com.barry.drools.mapAndList
+
+import com.barry.drools.bean.Person
+import java.util.ArrayList;
+import java.util.List;
+import  java.lang.Integer
+import  java.lang.String
+import java.util.Iterator
+
+rule "mapAndList1"
+when
+$list:List();
+$int: Integer() from $list
+$string:String() from $list
+$p1:Person() from $list
+$p2:Person(age==18) from $list
+then
+    System.out.println("mapAndList1被触发,list集合的元素："+$list);
+//    System.out.println("int类型的元素："+$int);
+//    System.out.println("字符串类型的元素："+$string);
+//    System.out.println("Person类型的元素："+$p1);
+//    System.out.println("Person类型的元素,年龄是18："+$p2);
+    //$list.add(6);
+//    System.out.println("打印第一个元素"+$list.get(0));
+//    System.out.println("打印第2个元素"+$list.get(1));
+//    System.out.println("打印第3个元素"+((Person)$list.get(2)).getAge());
+
+//     Iterator iterator = $list.iterator();
+//     while (iterator.hasNext()){
+//         Object next = iterator.next();
+//         if (next instanceof  Person){
+//                      System.out.println("值："+next);
+//
+//
+//         }
+//     }
+
+//     int size = $list.size();
+//     for (int i=0;i<size;i++){
+//         System.out.println($list.get(i));
+//     }
+
+//     for (Object obj :$list ) {
+//         System.out.println(obj);
+//     }
+
+ end
+

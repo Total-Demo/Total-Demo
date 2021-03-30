@@ -1,0 +1,22 @@
+package  com.barry.drools.ch11
+import com.barry.drools.bean.Person;
+import  com.barry.drools.mapAndList.Car;
+import  com.barry.drools.mapAndList.SubPerson;
+global com.barry.drools.bean.Person p;
+global  com.barry.drools.ch11.EmailService emailService
+//rule "global-Rule3"
+//salience 100
+//when
+//
+//then
+//    System.out.println("global-Rule3被触发,");
+//    emailService.sendEmail();
+//    emailService.sendEmail("global-Rule3");
+// end
+
+
+
+
+
+
+

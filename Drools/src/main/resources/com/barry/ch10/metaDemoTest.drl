@@ -1,0 +1,42 @@
+package  com.barry.drools.ch10
+import  java.util.Date;
+
+
+rule "metaDemo-rule-1"
+salience 10
+when
+then
+City city=new City();
+city=new City("北京");
+city=new City("北京","来广营");
+insert(city);
+    System.out.println("metaDemo2222222222被触发,");
+ end
+
+
+
+declare City
+@author("分享牛")
+ name:String @key
+ address:String
+end
+/**
+public class City{
+privite String name;
+privite String address;
+public City(){}
+public City(String name,String address) {}
+public City(String name){} @key
+}
+
+*/
+
+
+
+
+
+
+
+
+
+

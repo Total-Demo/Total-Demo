@@ -1,0 +1,15 @@
+package  com.barry.drools.dateEffective
+
+rule "date-effective"
+//date-effective "2019-04-14 20:05"
+date-expires "2020-01-07 11:12"
+when
+then
+    System.out.println("date-effective被触发");
+ end
+
+rule "date-effective1"
+when
+then
+    System.out.println("date-effective1被触发");
+ end

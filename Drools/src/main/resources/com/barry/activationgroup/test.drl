@@ -1,0 +1,17 @@
+package  com.barry.drools.activationGroup
+
+rule "activation-group-1"
+activation-group "activation-group-1"
+
+when
+then
+    System.out.println("activation-group-1被触发");
+ end
+
+rule "activation-group-2"
+activation-group "activation-group-1"
+salience 100
+when
+then
+    System.out.println("activation-group-2被触发");
+ end

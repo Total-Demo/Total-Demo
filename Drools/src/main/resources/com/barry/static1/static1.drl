@@ -1,0 +1,16 @@
+package com.barry.drools.static1
+import com.barry.drools.bean.Car
+import com.barry.drools.bean.Person
+import com.barry.drools.utils.StringUtils
+
+rule "大于等于6011"
+when
+ $car:Car(person.age>=60 && StringUtils.getA())
+then
+    System.out.println("大于等于60-static");
+end
+
+//单行注释
+/**
+多行注释
+*/

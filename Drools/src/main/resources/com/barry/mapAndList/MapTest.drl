@@ -1,0 +1,37 @@
+package  com.barry.drools.mapAndList
+import java.util.ArrayList;
+import java.util.List;
+import  java.lang.Integer
+import  java.lang.String
+import java.util.Iterator
+import  java.util.Map
+import java.util.Set
+
+
+rule "mapAndList2"
+when
+ $map:Map($keys:keySet())
+ $key:String() from $keys
+then
+System.out.println("打印map集合："+$map);
+System.out.println("打印map集合所有的keys："+$key);
+//System.out.println("shareniu3"+$map.get("shareniu3"));
+//System.out.println("##################");
+//      Set<Map.Entry<String, Object>> entries = $map.entrySet();
+//            for (Map.Entry<String, Object> entry:entries) {
+//                System.out.println("key:"+entry.getKey());
+//                System.out.println("val:"+entry.getValue());
+//            }
+//$map.put("3",3);
+ end
+
+//rule "mapAndList3"
+//
+//
+//when
+//$p:Person( age==18,getAge()==18)
+//then
+//$p.setAge(120);
+//$p.setName("分享牛2");
+//System.out.println("触发规则mapAndList3");
+// end

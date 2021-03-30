@@ -1,0 +1,29 @@
+package  com.barry.drools.ch10
+import com.barry.drools.bean.Person;
+import  com.barry.drools.bean.Car;
+import  com.barry.drools.mapAndList.SubPerson;
+
+//rule "modifyRule1"
+//salience 10
+//when
+//    $p:Person(age==30)
+//then
+//    System.out.println("modifyRule1被触发,"+$p);
+////    modify($p){
+////    setAge(27)
+////    }
+// end
+//
+//
+//rule "modifyRule2"
+//salience 1
+//when
+//    $p:Person(age==27)
+//then
+//    System.out.println("modifyRule2被触发,"+$p);
+//   // delete($p);
+// end
+
+
+
+

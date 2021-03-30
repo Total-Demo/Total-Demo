@@ -1,0 +1,29 @@
+package  com.barry.drools.enable
+
+rule "enble测试1"
+enabled false
+when
+then
+    System.out.println("默认的方式1");
+ end
+
+
+rule "enble测试2"
+when
+then
+    System.out.println("默认的方式2");
+ end
+
+rule "enble测试3"
+ salience -1
+when
+then
+    System.out.println("默认的方式3");
+ end
+
+ rule "enble测试4"
+ salience 100
+ when
+ then
+     System.out.println("默认的方式4");
+  end

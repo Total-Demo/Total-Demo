@@ -1,0 +1,75 @@
+package  com.barry.drools.mapAndList
+import com.barry.drools.bean.Person
+//rule "conditional1"
+//when
+//  $p:Person(age>10,name=="分享牛1")
+//then
+//
+//
+//    System.out.println("conditional1被触发");
+// end
+//
+//rule "conditional2"
+//when
+//  $p2:Person(age>10 && name=="分享牛1")
+//then
+//
+//
+//    System.out.println("conditional2被触发");
+// end
+//
+//
+//rule "conditional3"
+//when
+//  $p2:Person(age>10 && age<40)
+//then
+//
+//
+//    System.out.println("conditional3被触发");
+// end
+//
+//rule "conditional4"
+//when
+//  $p2:Person(age(>19 && <40))
+//then
+//
+//
+//    System.out.println("conditional4被触发");
+// end
+//
+// rule "conditional5"
+// when
+//   $p2:Person($age:age,age>19)
+// then
+//
+//
+//     System.out.println("conditional5被触发"+$age);
+//  end
+//
+//
+//   rule "conditional6"
+//   when
+//     $p2:Person(name contains("分享牛"))
+//   then
+//
+//
+//       System.out.println("conditional6被触发");
+//    end
+//
+//
+//       rule "conditional7"
+//       when
+//         $p2:Person(name not contains("分享牛"))
+//       then
+//
+//
+//           System.out.println("conditional7被触发");
+//        end
+//      rule "conditional8"
+//       when
+//         $p2:Person(name matches "^[0-9]*$")
+//       then
+//
+//
+//           System.out.println("conditional8被触发");
+//        end

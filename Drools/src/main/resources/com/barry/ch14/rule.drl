@@ -1,0 +1,15 @@
+package  com.shareniu.ch14
+
+rule "cdi-Rule1"
+salience 10
+when
+then
+    System.out.println("cdi-Rule1被触发,");
+ end
+
+
+
+
+
+
+
