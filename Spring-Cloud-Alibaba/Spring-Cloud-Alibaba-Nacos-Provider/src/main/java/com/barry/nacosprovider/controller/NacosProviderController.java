@@ -28,6 +28,6 @@ public class NacosProviderController {
     // 从上下文中读取配置
     @GetMapping(value = "/hi")
     public String sayHi() {
-        return "Hello " + applicationContext.getEnvironment().getProperty("user.name.barry");
+        return "Hello " + applicationContext.getEnvironment().getProperty("user.name.barry")+",abc:"+applicationContext.getEnvironment().getProperty("abc");
     }
 }
