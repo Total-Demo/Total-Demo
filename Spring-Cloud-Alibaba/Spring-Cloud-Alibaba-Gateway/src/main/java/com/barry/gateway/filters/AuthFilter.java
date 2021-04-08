@@ -15,9 +15,7 @@ import reactor.core.publisher.Mono;
 
 import java.util.Map;
 
-/**
- * 鉴权过滤器
- */
+
 @Component
 public class AuthFilter implements GlobalFilter, Ordered {
 
@@ -51,11 +49,12 @@ public class AuthFilter implements GlobalFilter, Ordered {
         return chain.filter(exchange);
     }
 
-    /**
+/**
      * 设置过滤器的执行顺序
      *
      * @return
-     */
+     **/
+
     @Override
     public int getOrder() {
         return Ordered.LOWEST_PRECEDENCE;

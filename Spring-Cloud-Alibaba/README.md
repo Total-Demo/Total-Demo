@@ -101,6 +101,8 @@ java -Dserver.port=8480 -Dcsp.sentinel.dashboard.server=localhost:8480 -Dproject
 - namespace
 #### 2)持久化到外部mysql
 #### 3)集群化部署
+#### 4)灰度发布-ip
+勾选“Beta发布”，在文本框里填入要下发配置的IP，多个IP用逗号分隔
 
 ### 2.Sentinel 
 > https://github.com/Macintosh-c/spring-cloud-alibaba/blob/master/spring-cloud-alibaba-examples/sentinel-example/sentinel-core-example/readme-zh.md
@@ -125,3 +127,22 @@ java -Dserver.port=8480 -Dcsp.sentinel.dashboard.server=localhost:8480 -Dproject
 - 系统规则  system
 - 授权规则  authority
 >https://blog.csdn.net/enjoyedu/category_10498794.html
+
+### 3.Gateway 
+> https://blog.csdn.net/rxh811/article/details/106667220/
+> https://blog.csdn.net/u010046908/article/details/100015060
+> https://www.jb51.net/article/179062.htm
+#### 1)断言
+内置路由断言工厂
+自定义路由断言工厂
+
+#### 2)过滤器
+局部过滤器
+- 内置局部过滤器
+- 自定义局部过滤
+全局过滤器
+- 内置全局过滤器
+- 自定义全局过滤器
+
+#### 2)网关限流
+
