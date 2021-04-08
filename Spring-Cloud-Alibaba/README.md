@@ -128,7 +128,7 @@ java -Dserver.port=8480 -Dcsp.sentinel.dashboard.server=localhost:8480 -Dproject
 - 授权规则  authority
 >https://blog.csdn.net/enjoyedu/category_10498794.html
 
-### 3.Gateway 
+### 3.Gateway  网关
 > https://blog.csdn.net/rxh811/article/details/106667220/
 > https://blog.csdn.net/u010046908/article/details/100015060
 > https://www.jb51.net/article/179062.htm
@@ -145,4 +145,11 @@ java -Dserver.port=8480 -Dcsp.sentinel.dashboard.server=localhost:8480 -Dproject
 - 自定义全局过滤器
 
 #### 2)网关限流
+
+
+### 4.Sleuth 链路追踪
+[为服务名称，traceId，spanId，是否将链路的追踪结果输出到第三方平台]
+[nacos-provider,********,*********,false]
+traceId:一条链路，多个微服务相同
+spanId：一条链路，多个微服务不同
 

@@ -2,6 +2,7 @@ package com.barry.nacosprovider.controller;
 
 
 import com.barry.nacosprovider.server.TestService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RefreshScope
+@Slf4j
 public class NacosProviderController {
 
     @Value("${server.port}")
@@ -26,6 +28,10 @@ public class NacosProviderController {
 
     @GetMapping(value = "/test/{message}")
     public String test(@PathVariable String message) {
+        log.info("Hello Nacos Discovery");
+        log.info("Hello Nacos Discovery2");
+        log.info("Hello Nacos Discovery3");
+        log.info("Hello Nacos Discovery4");
         return "Hello Nacos Discovery " + message + " i am from port " + port;
     }
 
