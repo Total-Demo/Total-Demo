@@ -7,9 +7,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
+
+import java.util.UUID;
 
 @RestController
 @RefreshScope
@@ -25,6 +29,9 @@ public class NacosProviderController {
 
     @Autowired
     TestService testService;
+
+    @Autowired
+    RedisTemplate redisTemplate;
 
     @GetMapping(value = "/test/{message}")
     public String test(@PathVariable String message) {
@@ -48,6 +55,7 @@ public class NacosProviderController {
     // 从上下文中读取配置
     @GetMapping(value = "/hi")
     public String sayHi() {
+        redisTemplate.opsForValue().set("abcbarry", UUID.randomUUID().toString());
         return "Hello " + applicationContext.getEnvironment().getProperty("user.name.barry")+",abc:"+applicationContext.getEnvironment().getProperty("abc");
     }
 

@@ -58,6 +58,15 @@ startup.cmd
 
 注：从 0.8.0 版本开始，需要登录才可访问，默认账号密码为 nacos/nacos
 
+
+docker部署
+docker pull nacos/nacos-server:1.4.1
+docker run -d --name nacos --restart=always -p 8848:8848 -e MODE=standalone -e JVM_XMS=256m -e JVM_XMX=256m -e SPRING_DATASOURCE_PLATFORM=mysql -e MYSQL_SERVICE_HOST=172.16.98.200 -e MYSQL_SERVICE_PORT=3306 -e MYSQL_SERVICE_DB_NAME=nacos_config -e MYSQL_SERVICE_USER=root -e MYSQL_SERVICE_PASSWORD=Softtek@123 -e MYSQL_DATABASE_NUM=1 nacos/nacos-server:1.4.1
+
+推镜像仓库
+docker tag eec289123412 harbor.local.irain.top/sbux/nacos:1.4.1
+docker push harbor.local.irain.top/sbux/nacos:1.4.1
+
 #### 5)参考：
 >https://www.jianshu.com/p/9a8d94c0c90c
 

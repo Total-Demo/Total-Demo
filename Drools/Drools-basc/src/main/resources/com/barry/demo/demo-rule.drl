@@ -1,0 +1,52 @@
+package  com.barry.demo
+import  com.barry.drools.bean.Member
+
+/*rule "test-grade1"
+salience 100
+when
+    $m:Member(grade>10)
+then
+    System.out.println("等级>=金星 触发");
+end*/
+
+rule "test-grade2"
+salience 100
+when
+    $m:Member(grade<=10)
+then
+    System.out.println("等级<金星 触发");
+    delete($m);
+end
+
+/*rule "test-accessTime1"
+salience 90
+when
+    $m:Member(accessTime<7)
+then
+    System.out.println("访问时间<7天 触发");
+end*/
+
+rule "test-accessTime2"
+salience 90
+when
+    $m:Member(accessTime>=7)
+then
+    System.out.println("访问时间>=7天 触发");
+    delete($m);
+end
+
+rule "test-conAmount1"
+salience 80
+when
+    $m:Member(conAmount>=100)
+then
+    System.out.println("消费金额>100元 触发");
+end
+
+rule "test-conAmount2"
+salience 80
+when
+    $m:Member(conAmount<=100)
+then
+    System.out.println("消费金额<=100元 触发");
+end

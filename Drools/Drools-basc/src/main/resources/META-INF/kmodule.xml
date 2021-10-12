@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<kmodule xmlns="http://www.drools.org/xsd/kmodule">
+    <kbase name="costprice" packages="com.barry.drools">
+        <ksession name="costprice"></ksession>
+    </kbase>
+
+    <kbase name="test-member" packages="com.barry.demo">
+        <ksession name="test-member"></ksession>
+    </kbase>
+
+    <kbase name="static-rule-kbase" packages="com.barry.drools.static1">
+        <ksession name="static-rule-ksession"></ksession>
+    </kbase>
+
+    <kbase name="enable-rule-kbase" packages="com.barry.drools.enable">
+        <ksession name="enable-rule-ksession"></ksession>
+    </kbase>
+
+    <kbase name="agendaGroup-rule-kbase" packages="com.barry.drools.agendaGroup">
+        <ksession name="agendaGroup-rule-ksession"></ksession>
+    </kbase>
+
+    <kbase name="activationGroup-rule-kbase" packages="com.barry.drools.activationGroup">
+        <ksession name="activationGroup-rule-ksession"></ksession>
+    </kbase>
+
+    <kbase name="dateEffective-rule-kbase" packages="com.barry.drools.dateEffective">
+        <ksession name="dateEffective-rule-ksession"></ksession>
+    </kbase>
+
+    <kbase name="timerTest-rule-kbase" packages="com.barry.drools.timerTest">
+        <ksession name="timerTest-rule-ksession"></ksession>
+    </kbase>
+
+    <kbase name="noLoop-rule-kbase" packages="com.barry.drools.noLoop">
+        <ksession name="noLoop-rule-ksession"></ksession>
+    </kbase>
+
+    <kbase name="mapAndList-kbase" packages="com.barry.drools.mapAndList"    >
+        <ksession name="mapAndList-rule-ksession"   ></ksession>
+    </kbase>
+
+    <kbase name="fact-kbase" packages="com.barry.drools.ch10"    >
+        <ksession name="fact-rule-ksession"   ></ksession>
+    </kbase>
+
+    <kbase name="global-kbase" packages="com.barry.drools.ch11"    >
+        <ksession name="global-rule-ksession"   ></ksession>
+    </kbase>
+    <kbase name="Listener-kbase" packages="com.shareniu.ch13"    >
+        <ksession name="Listener-rule-ksession"   ></ksession>
+    </kbase>
+    <kbase name="cdi-kbase" packages="com.shareniu.ch14"    >
+        <ksession name="cdi-rule-ksession"  default="false"  ></ksession>
+    </kbase>
+</kmodule>
